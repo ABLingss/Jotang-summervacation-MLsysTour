@@ -29,7 +29,7 @@ OPT_LEVELS = ["O0", "O1", "O2", "O3", "Ofast"]  # 优化级别
 REPEATS = 5                          # 每个测试重复次数
 
 # 矩阵乘法的C代码模板
-MATRIX_MUL_CODE = """
+MATRIX_MUL_CODE = r"""
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -95,7 +95,7 @@ double matrix_multiply_optimized(double* A, double* B, double* C, int n) {
 
 int main(int argc, char** argv) {
     if (argc != 3) {
-        printf("Usage: %s <matrix_size> <optimized_flag>", argv[0]);
+        printf("Usage: %s <matrix_size> <optimized_flag>\n", argv[0]);
         return 1;
     }
     
